@@ -4,13 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Link to Google Fonts for different fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@300;600&display=swap" rel="stylesheet">
     
-    <!-- Some basic CSS styling -->
     <style>
       body {
-        background-color: blue;
+        background: #ff00ff url('https://www.w3schools.com/css/img_tree.png') repeat;
         font-family: 'Roboto', sans-serif;
         color: white;
         text-align: center;
@@ -38,8 +36,20 @@
       }
 
       .content {
-        font-size: 18px;
+        font-size: 9px;
         margin-bottom: 20px;
+      }
+      .model-container { 
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
+        height: 100vh; 
+        margin: 0;
+      }
+
+      model-viewer {
+        max-width: 80%;
+        max-height: 80%; 
       }
     </style>
     <title>Lottas AR Website</title>
