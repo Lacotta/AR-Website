@@ -3,19 +3,78 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Link to Google Fonts for different fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@300;600&display=swap" rel="stylesheet">
+    
+    <!-- Some basic CSS styling -->
+    <style>
+      body {
+        background-color: blue;
+        font-family: 'Roboto', sans-serif;
+        color: white;
+        text-align: center;
+        margin: 0;
+      }
+
+      h2 {
+        font-family: 'Open Sans', sans-serif;
+      }
+
+      .container {
+        padding: 20px;
+      }
+
+      .image-container img {
+        width: 100%;
+        max-width: 600px;
+        margin: 10px 0;
+      }
+
+      .section-title {
+        font-size: 24px;
+        font-weight: 600;
+        margin-top: 40px;
+      }
+
+      .content {
+        font-size: 18px;
+        margin-bottom: 20px;
+      }
+    </style>
     <title>Lottas AR Website</title>
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
   </head>
-  <body bgcolor="blue">
+  <body>
     <H2>me in ar</H2>
       <model-viewer src="me.glb"
                     ios-src="me.usdz"
-                    alt="Titos Cave"
+                    alt="ME"
                     ar
                     auto-rotate
                     camera-controls
                     ar-modes="webxr scene-viewer quick-look" 
                     environment-image="neutral">   
       </model-viewer>
+      <div class="container">
+        <div class="section-title">Image Gallery</div>
+        <div class="image-container">
+          <!-- Placeholder images: Replace these URLs with your actual image paths -->
+          <img src="https://i.pinimg.com/originals/2d/6a/a9/2d6aa93d49604ce848e5e60b1fae509d.gif" alt="Image 1">
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="section-title">More AR Models</div>
+        <model-viewer src="camel.glb"
+                      ios-src="camel.usdz"
+                      alt="Camel"
+                      ar
+                      auto-rotate
+                      camera-controls
+                      ar-modes="webxr scene-viewer quick-look"
+                      environment-image="neutral">
+        </model-viewer>
+      </div>
        </body>
 </html>
