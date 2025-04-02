@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-
     <script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@latest/dist/model-viewer.min.js"></script>
 
     <style>
@@ -33,18 +32,36 @@
         font-size: 36px;
       }
 
-      .image-container {
+      .intro-container {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
         max-width: 800px;
-        margin: 30px auto;
+        margin: 0 auto;
+        gap: 20px;
+      }
+      
+      @media (max-width: 768px) {
+        .intro-container {
+          flex-direction: column;
+        }
+      }
+
+      .image-container {
+        flex: 0 0 300px;
         overflow: hidden;
         border-radius: 8px;
+        margin: 0;
       }
 
       .image-container img {
         width: 100%;
-        max-width: 600px;
         display: block;
-        margin: 0 auto;
+      }
+
+      .text-container {
+        flex: 1;
+        text-align: justify;
       }
 
       .section-title {
@@ -70,9 +87,9 @@
         display: flex; 
         justify-content: normal;
         align-items: center;
-        height: 400px;
+        height: 300px;
         margin: 20px auto;
-        max-width: 700px;
+        max-width: 500px;
       }
 
       model-viewer {
@@ -84,17 +101,20 @@
   </head>
   <body>
     <H2>Choleraepidemie 1892</H2>   
-    <div class="content">
+    
+    <div class="intro-container">
+      <div class="image-container">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/G%C3%A4ngeviertel_Judenhof_1902_Wutcke_efoto-hamburg.jpg/800px-G%C3%A4ngeviertel_Judenhof_1902_Wutcke_efoto-hamburg.jpg" alt="Historisches Bild vom Gängeviertel Hamburg">
+      </div>
       
-    <div class="image-container">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/G%C3%A4ngeviertel_Judenhof_1902_Wutcke_efoto-hamburg.jpg/800px-G%C3%A4ngeviertel_Judenhof_1902_Wutcke_efoto-hamburg.jpg" alt="Historisches Bild vom Gängeviertel Hamburg">
-    </div>
-      <p> Wir befinden uns im Gängeviertel Hamburgs: eng verschachtelte Häuser, Wohnungen über Wohnungen, nebeneinander und ineinander verwachsen. Stickige Luft in engen Straßen und Gassen. Enge Torbögen und Abzweigungen, Kellerwohnungen mit kleinen Fenstern und Dunkelheit.
+      <div class="text-container">
+        <p>Wir befinden uns im Gängeviertel Hamburgs: eng verschachtelte Häuser, Wohnungen über Wohnungen, nebeneinander und ineinander verwachsen. Stickige Luft in engen Straßen und Gassen. Enge Torbögen und Abzweigungen, Kellerwohnungen mit kleinen Fenstern und Dunkelheit.
         Was früher ein großes Wohnviertel der Arbeiterklasse war, besteht heutzutage nur noch aus wenigen Wohnblöcken, die an die alten Gassen erinnern.
-        Zu Beginn des 20. Jahrhunderts veranlasste die Stadt Hamburg eine weitreichende Veränderung des Stadtbildes im Gängeviertel. In den zuvor engen Straßen ballten sich die Bewohner unter höchst unhygienischen Bedingungen, was eine ideale Brutstätte für das Bakterium Vibrio cholerae darstellte.
-      </p>
+        Zu Beginn des 20. Jahrhunderts veranlasste die Stadt Hamburg eine weitreichende Veränderung des Stadtbildes im Gängeviertel. In den zuvor engen Straßen ballten sich die Bewohner unter höchst unhygienischen Bedingungen, was eine ideale Brutstätte für das Bakterium Vibrio cholerae darstellte.</p>
+      </div>
     </div>
-      <H2>Cholera</H2>
+    
+    <H2>Cholera</H2>
     <div class="model-container">
       <model-viewer src="bacteria.glb"
                     ios-src="bacteria.usdz"
@@ -110,15 +130,13 @@
       </model-viewer>
     </div>
     <div class="content">
-      <p> Cholera ist eine bakterielle Krankheit, die sich durch kontaminiertes Wasser verbreitet. Eine Infektion kann zu schwerem Durchfall und hohem Flüssigkeitsverlust führen und unbehandelt tödliche Folgen haben.
+      <p>Cholera ist eine bakterielle Krankheit, die sich durch kontaminiertes Wasser verbreitet. Eine Infektion kann zu schwerem Durchfall und hohem Flüssigkeitsverlust führen und unbehandelt tödliche Folgen haben.
         Die Verbreitung der Infektion in Hamburg erreichte im Sommer 1892 ihren Höhepunkt. Zu dieser Zeit wurde das Trinkwasser noch ungefiltert aus der Elbe entnommen, wodurch sich das Bakterium innerhalb kürzester Zeit in der Stadt verbreiten konnte. Besonders das Gängeviertel litt aufgrund der Überbevölkerung unter sanitären Problemen, weshalb die Bewohner gezwungen waren, ihren täglichen Wasserbedarf teils direkt aus den Flüssen zu schöpfen.
         Am 24. August 1892 besuchte Robert Koch, als Vertreter der Reichsregierung, das Gängeviertel, um der Stadt zu Hilfe zu kommen. Geschockt über den hygienischen Zustand des Viertels, bestätigte er den Ausbruch der Choleraepidemie und veranlasste die Schließung von Schulen sowie ein Versammlungsverbot. Die Stadt stellte abgekochtes Trinkwasser zur Verfügung und errichtete Desinfektionsstellen. In der angrenzenden Stadt Altona wurde das Trinkwasser bereits durch eine Sandfilteranlage gereinigt, wodurch dort weit weniger Infektionen auftraten. Auch die Hamburger Wasserwerke bemühten sich nun um den Bau einer Trinkwasserfiltration.
-        Nach zehn Wochen des Ausnahmezustands nahm die Zahl der Neuinfektionen langsam ab. Insgesamt forderte die Epidemie über 8.600 Tote.
-      </p>
+        Nach zehn Wochen des Ausnahmezustands nahm die Zahl der Neuinfektionen langsam ab. Insgesamt forderte die Epidemie über 8.600 Tote.</p>
     </div>
-      <div class="content">
-        <p> Auch heutzutage ist Cholera noch für viele Menschen eine lebensbedrohliche Krankheit. Seit 2021 sind die Cholera-Ausbrüche weltweit wieder angestiegen. Durch Erdbeben, Krieg oder innere Unruhen kann die lokale Trinkwasserversorgung zusammenbrechen, wodurch die öffentliche Hygiene gefährdet wird. Die WHO schätzt die Todesfälle weltweit auf 21.000 bis 143.000 pro Jahr.
-        </p>
-      </div>
-    </body>
+    <div class="content">
+      <p>Auch heutzutage ist Cholera noch für viele Menschen eine lebensbedrohliche Krankheit. Seit 2021 sind die Cholera-Ausbrüche weltweit wieder angestiegen. Durch Erdbeben, Krieg oder innere Unruhen kann die lokale Trinkwasserversorgung zusammenbrechen, wodurch die öffentliche Hygiene gefährdet wird. Die WHO schätzt die Todesfälle weltweit auf 21.000 bis 143.000 pro Jahr.</p>
+    </div>
+  </body>
 </html>
