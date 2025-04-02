@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 
     <script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@latest/dist/model-viewer.min.js"></script>
 
@@ -16,7 +16,7 @@
       
       body {
         background: #222222;
-        font-family: 'Press Start 2P';
+        font-family: 'Roboto', sans-serif;
         color: #ffffff;
         text-align: center;
         margin: 0;
@@ -25,7 +25,7 @@
         position: relative;
       }
       h2 {
-        font-family: 'Press Start 2P';
+        font-family: 'Roboto', sans-serif;
         color: #FF6600;
         text-transform: uppercase;
         letter-spacing: 2px;
@@ -33,9 +33,18 @@
         font-size: 36px;
       }
 
+      .image-container {
+        max-width: 800px;
+        margin: 30px auto;
+        overflow: hidden;
+        border-radius: 8px;
+      }
+
       .image-container img {
         width: 100%;
         max-width: 600px;
+        display: block;
+        margin: 0 auto;
       }
 
       .section-title {
@@ -74,7 +83,18 @@
     <title>Lottas AR Website</title>
   </head>
   <body>
-    <H2>Cholera Hamburg</H2>   
+    <H2>Choleraepidemie 1892</H2>   
+    <div class="content">
+      
+    <div class="image-container">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/G%C3%A4ngeviertel_Judenhof_1902_Wutcke_efoto-hamburg.jpg/800px-G%C3%A4ngeviertel_Judenhof_1902_Wutcke_efoto-hamburg.jpg" alt="Historisches Bild vom Gängeviertel Hamburg">
+    </div>
+      <p> Wir befinden uns im Gängeviertel Hamburgs: eng verschachtelte Häuser, Wohnungen über Wohnungen, nebeneinander und ineinander verwachsen. Stickige Luft in engen Straßen und Gassen. Enge Torbögen und Abzweigungen, Kellerwohnungen mit kleinen Fenstern und Dunkelheit.
+        Was früher ein großes Wohnviertel der Arbeiterklasse war, besteht heutzutage nur noch aus wenigen Wohnblöcken, die an die alten Gassen erinnern.
+        Zu Beginn des 20. Jahrhunderts veranlasste die Stadt Hamburg eine weitreichende Veränderung des Stadtbildes im Gängeviertel. In den zuvor engen Straßen ballten sich die Bewohner unter höchst unhygienischen Bedingungen, was eine ideale Brutstätte für das Bakterium Vibrio cholerae darstellte.
+      </p>
+    </div>
+      <H2>Cholera</H2>
     <div class="model-container">
       <model-viewer src="bacteria.glb"
                     ios-src="bacteria.usdz"
@@ -90,22 +110,15 @@
       </model-viewer>
     </div>
     <div class="content">
-      <p> In diesen Gängen fand im Jahr 1892 eine Choleraepidemie statt. Durch das Wasser der Elbe, welches zu dieser Zeit noch ungefiltert zum Kochen oder als Trinkwasser verwendet wurde, gelangten die Bakterien in den Organismus der Anwohner:innen Hamburgs. Die Regierung erkannte die Gefahr, welche sich vor allem in dem Arbeiterviertel Hamburgs verbreitete, erst sehr spät. Die Verbreitung des unsichtbare Bakterium wurde vorallem durch das enge zusammen Wohnen und die dadurch schlechte Hygiene begünstigt. Etwa 8600 Menschen erlagen in kürzester Zeit den Folgen der Krankheit. </p>
+      <p> Cholera ist eine bakterielle Krankheit, die sich durch kontaminiertes Wasser verbreitet. Eine Infektion kann zu schwerem Durchfall und hohem Flüssigkeitsverlust führen und unbehandelt tödliche Folgen haben.
+        Die Verbreitung der Infektion in Hamburg erreichte im Sommer 1892 ihren Höhepunkt. Zu dieser Zeit wurde das Trinkwasser noch ungefiltert aus der Elbe entnommen, wodurch sich das Bakterium innerhalb kürzester Zeit in der Stadt verbreiten konnte. Besonders das Gängeviertel litt aufgrund der Überbevölkerung unter sanitären Problemen, weshalb die Bewohner gezwungen waren, ihren täglichen Wasserbedarf teils direkt aus den Flüssen zu schöpfen.
+        Am 24. August 1892 besuchte Robert Koch, als Vertreter der Reichsregierung, das Gängeviertel, um der Stadt zu Hilfe zu kommen. Geschockt über den hygienischen Zustand des Viertels, bestätigte er den Ausbruch der Choleraepidemie und veranlasste die Schließung von Schulen sowie ein Versammlungsverbot. Die Stadt stellte abgekochtes Trinkwasser zur Verfügung und errichtete Desinfektionsstellen. In der angrenzenden Stadt Altona wurde das Trinkwasser bereits durch eine Sandfilteranlage gereinigt, wodurch dort weit weniger Infektionen auftraten. Auch die Hamburger Wasserwerke bemühten sich nun um den Bau einer Trinkwasserfiltration.
+        Nach zehn Wochen des Ausnahmezustands nahm die Zahl der Neuinfektionen langsam ab. Insgesamt forderte die Epidemie über 8.600 Tote.
+      </p>
     </div>
-      <H2>Animation tester</H2>   
-      <div class="model-container">
-        <model-viewer src="cube.glb"
-                      ios-src="cube.usdz"
-                      alt="Animation tester"
-                      ar
-                      auto-rotate
-                      camera-controls
-                      ar-modes="webxr scene-viewer quick-look"
-                      animation-name="CubeAction"
-                      autoplay
-                      animation-loop
-                      environment-image="neutral">
-        </model-viewer>
+      <div class="content">
+        <p> Auch heutzutage ist Cholera noch für viele Menschen eine lebensbedrohliche Krankheit. Seit 2021 sind die Cholera-Ausbrüche weltweit wieder angestiegen. Durch Erdbeben, Krieg oder innere Unruhen kann die lokale Trinkwasserversorgung zusammenbrechen, wodurch die öffentliche Hygiene gefährdet wird. Die WHO schätzt die Todesfälle weltweit auf 21.000 bis 143.000 pro Jahr.
+        </p>
       </div>
     </body>
 </html>
