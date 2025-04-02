@@ -41,19 +41,6 @@
         gap: 20px;
       }
       
-      @media (max-width: 768px) {
-        .intro-container, .cholera-container {
-          flex-direction: column;
-          align-items: center;
-        }
-        
-        .image-container {
-          width: 100%;
-          max-width: 450px;
-          margin-bottom: 20px;
-        }
-      }
-
       .image-container {
         flex: 0 0 300px;
         overflow: hidden;
@@ -65,11 +52,16 @@
         width: 100%;
         display: block;
         height: auto;
+        /* Desktop-Stil bleibt unverändert */
       }
 
       .text-container {
         flex: 1;
         text-align: justify;
+      }
+
+      .text-container p, .content p {
+        font-size: 16px; /* Einheitliche Schriftgröße für alle Textabschnitte */
       }
 
       .section-title {
@@ -79,7 +71,6 @@
       }
 
       .content {
-        font-size: 14px;
         max-width: 800px;
         margin: 0 auto;
         background-color: transparent;
@@ -110,9 +101,23 @@
         flex-direction: row-reverse;  /* Bild rechts, Text links */
       }
       
+      /* Responsive Styles für mobile Geräte */
       @media (max-width: 768px) {
-        .cholera-container {
+        .intro-container, .cholera-container {
           flex-direction: column;  /* Auf Mobilgeräten übereinander */
+          align-items: center;
+        }
+        
+        .image-container {
+          width: 100%;
+          max-width: 450px;
+          margin-bottom: 20px;
+        }
+        
+        /* Spezieller Stil nur für mobile Bilder */
+        .image-container img {
+          object-fit: contain; /* Verhindert das Cropping der Bilder nur auf Mobilgeräten */
+          max-height: 300px; /* Begrenzt die Höhe nur auf Mobilgeräten */
         }
       }
     </style>
