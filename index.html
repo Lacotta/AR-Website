@@ -32,7 +32,7 @@
         font-size: 36px;
       }
 
-      .intro-container {
+      .intro-container, .cholera-container {
         display: flex;
         flex-direction: row;
         align-items: flex-start;
@@ -42,7 +42,7 @@
       }
       
       @media (max-width: 768px) {
-        .intro-container {
+        .intro-container, .cholera-container {
           flex-direction: column;
           align-items: center;
         }
@@ -104,6 +104,17 @@
         width: 100%;
         height: 100%;
       }
+      
+      /* Wechselnde Bildanordnung für zweiten Container */
+      .cholera-container {
+        flex-direction: row-reverse;  /* Bild rechts, Text links */
+      }
+      
+      @media (max-width: 768px) {
+        .cholera-container {
+          flex-direction: column;  /* Auf Mobilgeräten übereinander */
+        }
+      }
     </style>
     <title>Lottas AR Website</title>
   </head>
@@ -137,14 +148,23 @@
                     environment-image="neutral">
       </model-viewer>
     </div>
+    
+    <div class="cholera-container">
+      <div class="image-container">
+        <img src="https://hhguide.de/wp-content/uploads/2022/07/gaengeviertel-ca-1930-foto-p-sackarndt-mda-1136x1536.jpg" alt="Historische Aufnahme der Cholera-Epidemie oder Sanitäre Einrichtungen">
+      </div>
+      
+      <div class="text-container">
+        <p>Cholera ist eine bakterielle Krankheit, die sich durch kontaminiertes Wasser verbreitet. Eine Infektion kann zu schwerem Durchfall und hohem Flüssigkeitsverlust führen und unbehandelt tödliche Folgen haben.
+          Die Verbreitung der Infektion in Hamburg erreichte im Sommer 1892 ihren Höhepunkt. Zu dieser Zeit wurde das Trinkwasser noch ungefiltert aus der Elbe entnommen, wodurch sich das Bakterium innerhalb kürzester Zeit in der Stadt verbreiten konnte. Besonders das Gängeviertel litt aufgrund der Überbevölkerung unter sanitären Problemen, weshalb die Bewohner gezwungen waren, ihren täglichen Wasserbedarf teils direkt aus den Flüssen zu schöpfen.
+          Am 24. August 1892 besuchte Robert Koch, als Vertreter der Reichsregierung, das Gängeviertel, um der Stadt zu Hilfe zu kommen. Geschockt über den hygienischen Zustand des Viertels, bestätigte er den Ausbruch der Choleraepidemie und veranlasste die Schließung von Schulen sowie ein Versammlungsverbot.</p>
+      </div>
+    </div>
+    
     <div class="content">
-      <p>Cholera ist eine bakterielle Krankheit, die sich durch kontaminiertes Wasser verbreitet. Eine Infektion kann zu schwerem Durchfall und hohem Flüssigkeitsverlust führen und unbehandelt tödliche Folgen haben.
-        Die Verbreitung der Infektion in Hamburg erreichte im Sommer 1892 ihren Höhepunkt. Zu dieser Zeit wurde das Trinkwasser noch ungefiltert aus der Elbe entnommen, wodurch sich das Bakterium innerhalb kürzester Zeit in der Stadt verbreiten konnte. Besonders das Gängeviertel litt aufgrund der Überbevölkerung unter sanitären Problemen, weshalb die Bewohner gezwungen waren, ihren täglichen Wasserbedarf teils direkt aus den Flüssen zu schöpfen.
-        Am 24. August 1892 besuchte Robert Koch, als Vertreter der Reichsregierung, das Gängeviertel, um der Stadt zu Hilfe zu kommen. Geschockt über den hygienischen Zustand des Viertels, bestätigte er den Ausbruch der Choleraepidemie und veranlasste die Schließung von Schulen sowie ein Versammlungsverbot. Die Stadt stellte abgekochtes Trinkwasser zur Verfügung und errichtete Desinfektionsstellen. In der angrenzenden Stadt Altona wurde das Trinkwasser bereits durch eine Sandfilteranlage gereinigt, wodurch dort weit weniger Infektionen auftraten. Auch die Hamburger Wasserwerke bemühten sich nun um den Bau einer Trinkwasserfiltration.
-        Nach zehn Wochen des Ausnahmezustands nahm die Zahl der Neuinfektionen langsam ab. Insgesamt forderte die Epidemie über 8.600 Tote.</p>
-    </div> 
-    <div class="image-container">
-      <img src="https://hhguide.de/wp-content/uploads/2022/07/gaengeviertel-ca-1930-foto-p-sackarndt-mda-1136x1536.jpg" alt="Historisches Bild vom Gängeviertel Hamburg">
+      <p>Die Stadt stellte abgekochtes Trinkwasser zur Verfügung und errichtete Desinfektionsstellen. In der angrenzenden Stadt Altona wurde das Trinkwasser bereits durch eine Sandfilteranlage gereinigt, wodurch dort weit weniger Infektionen auftraten. Auch die Hamburger Wasserwerke bemühten sich nun um den Bau einer Trinkwasserfiltration.
+        Nach zehn Wochen des Ausnahmezustands nahm die Zahl der Neuinfektionen langsam ab. Insgesamt forderte die Epidemie über 8.600 Tote.
+      </p>
     </div>
     <div class="content">
       <p>Auch heutzutage ist Cholera noch für viele Menschen eine lebensbedrohliche Krankheit. Seit 2021 sind die Cholera-Ausbrüche weltweit wieder angestiegen. Durch Erdbeben, Krieg oder innere Unruhen kann die lokale Trinkwasserversorgung zusammenbrechen, wodurch die öffentliche Hygiene gefährdet wird. Die WHO schätzt die Todesfälle weltweit auf 21.000 bis 143.000 pro Jahr.</p>
